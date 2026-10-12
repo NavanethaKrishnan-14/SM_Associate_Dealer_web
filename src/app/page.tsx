@@ -22,7 +22,7 @@ async function submitSell(e:React.FormEvent){
  e.preventDefault();
  if(!sellForm.name.trim()||!sellForm.phone.trim()||!sellForm.city.trim()||!sellForm.brand.trim()||!sellForm.model.trim()){setToast("Please complete the required details.");return}
  const session=sessionStorage.getItem("smcars-session");
- if(!session){setAuthOpen(true);setAuthMode("signup");setToast("Create an account to submit your selling request.");return}
+ if(!session){setRole("CUSTOMER");setAuthMode("signup");setAuthOpen(true);setToast("Create a customer account to submit your selling request.");return}
  try{
   const parsed=JSON.parse(session);
   const response=await fetch(API+"/sell-car-requests",{method:"POST",headers:{"Content-Type":"application/json",Authorization:"Bearer "+parsed.accessToken},body:JSON.stringify({contactName:sellForm.name,contactPhone:sellForm.phone,city:sellForm.city,brand:sellForm.brand,model:sellForm.model,year:sellForm.year||undefined,kms:sellForm.kms||undefined,registration:sellForm.registration||undefined})});
