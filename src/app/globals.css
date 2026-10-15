@@ -8,7 +8,7 @@
 
 
 .social-auth-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
-.social-auth-button{display:flex;align-items:center;justify-content:center;gap:9px;min-height:46px;padding:10px 12px;border:1px solid rgba(150,190,177,.28);border-radius:13px;background:rgba(10,25,21,.86);color:#f5faf8;font:600 13px/1.3 inherit;cursor:pointer;transition:border-color .18s ease,transform .18s ease,background .18s ease}
+.social-auth-button{display:flex;align-items:center;justify-content:center;gap:9px;min-height:46px;padding:10px 12px;border:1px solid rgba(150,190,177,.28);border-radius:13px;background:rgba(10,25,21,.86);color:#f5faf8;font:inherit;font-size:13px;line-height:1.3;font-weight:600;cursor:pointer;transition:border-color .18s ease,transform .18s ease,background .18s ease}
 .social-auth-button:hover{border-color:rgba(49,230,180,.7);background:rgba(19,48,39,.96);transform:translateY(-1px)}
 .social-auth-button:disabled{opacity:.55;cursor:not-allowed;transform:none}
 .google-mark,.facebook-mark{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:#fff;font:800 15px/1 Arial,sans-serif}
